@@ -1,0 +1,47 @@
+@host = http://localhost:8080
+
+### Cadastro
+POST {{host}}/auth/cadastro
+Content-Type: application/json
+
+{
+  "nomeCompleto": "Maria Silva",
+  "email": "maria@exemplo.com",
+  "senha": "senha12345",
+  "anonimo": false,
+  "tipo": "usuario"
+}
+
+### Verificacao (copie o token do log da aplicacao)
+GET {{host}}/auth/verificar?token=COLE_O_TOKEN_AQUI
+
+### Reenvio do link
+POST {{host}}/auth/reenviar-verificacao
+Content-Type: application/json
+
+{
+  "email": "maria@exemplo.com"
+}
+
+### Login
+POST {{host}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "maria@exemplo.com",
+  "senha": "senha12345"
+}
+
+### Perfil
+GET {{host}}/me
+Authorization: Bearer COLE_O_JWT_AQUI
+
+### Atualizacao de perfil
+PATCH {{host}}/me
+Content-Type: application/json
+Authorization: Bearer COLE_O_JWT_AQUI
+
+{
+  "nomeCompleto": "Maria S. Oliveira",
+  "anonimo": true
+}

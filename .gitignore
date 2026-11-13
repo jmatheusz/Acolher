@@ -36,6 +36,8 @@ web-build/
 .env
 *.env
 *.env.*
+!*.env.example
+!**/*.env.example
 **/.env
 **/*.env
 application-local.properties
