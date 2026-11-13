@@ -1,0 +1,66 @@
+# ========================================================
+# Git Ignore - Projeto Acolher
+# ========================================================
+
+# Scripts e arquivos utilitários locais da raiz (NÃO SUBIR)
+iniciar_tudo.bat
+iniciar*.bat
+criar_banco.bat
+criar*.bat
+create_db.sql
+subir_*.bat
+*.bat
+
+# Logs e arquivos de depuração
+backend*.log
+*.log
+**/*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.tmp
+
+# Dependencias e builds
+node_modules/
+**/node_modules/
+target/
+**/target/
+.expo/
+**/.expo/
+dist/
+**/dist/
+web-build/
+**/web-build/
+
+# Credenciais e variaveis de ambiente
+.env
+*.env
+*.env.*
+**/.env
+**/*.env
+application-local.properties
+**/application-local.properties
+application-local.yml
+**/application-local.yml
+
+# IDEs e editores
+.idea/
+**/.idea/
+.vscode/
+**/.vscode/
+*.iml
+*.ipr
+*.iws
+.settings/
+.classpath
+.project
+.factorypath
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Backups de repositórios internos
+*.git.bak
+**/.git.bak
